@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>数组&&对象的应用</title>
+
+  </head>
+  <body>
+    <h1>Array</h1>
+    <div>实验数组arr=[1, 2, 3, 4, 5]</div>
+    <div class="erwei">
+      <div>二维数组</div>
+      <button class="to-click">生成二维数组</button>
+      <p class="result"></p>
+    </div>
+    <div class="foreach">
+      <p>一.forEach方法，让数组中的每一项做一件事情。应用场景，常用于对数组中的所有元素做同样的操作，无返回值。不会改变原数组,不能被终止</p>
+      <button class="for-each">点击各项加一</button>
+      <button onclick="doThis()">btn2</button>
+      <p class="result"></p>
+    </div>
+    <div class="map">
+      <p>一.map方法，对原数组进行操作后，返回新数组。应用场景，需要返回值。不会改变原数组</p>
+      <button class="to-map">点击各项加2</button>
+      <button onclick="doMap()">btn2</button>
+      <p class="result"></p>
+    </div>
+    <div class="filter">
+      <p>一.filter方法，返回符合参数（函数）的元素，组成新数组。应用场景，过滤数组。不会改变原数组</p>
+      <button class="to-filter">点击去奇留偶</button>
+      <button onclick="doFilter()">[2,3,4,2,3,5]点击去重</button>
+      <p class="result"></p>
+    </div>
+    <div class="assert">
+      <p>一.some .every方法，对数组进行判断。 some一个元素符合，则返回true ，every需数组中全部元素皆符合某条件。例判断［2，3，4］中偶数</p>
+      <button class="some">数组中有偶数即返回true</button>
+      <button onclick="doEvery()">数组中全部为数组返回true</button>
+      <p class="result"></p>
+    </div>
+    <div class="reduce">
+      <p>一.reduce从左向右 .doReduceRight 从右向左 依次处理数组中元素，最终累计为一个值 </p>
+      <button class="to-reduce">从左向右减［3, 2, 1］</button>
+      <button onclick="doReduceRight()">从右向左减［3, 2, 1］</button>
+      <button onclick="doReduce()">返回最长元素［'aaa', 'q', '1234'］</button>
+      <p class="result"></p>
+    </div>
+    <div class="includes">
+      <p>一.includes检查数组是否包含某个值, 参数类型需要和元素类型一致，才会返回true </p>
+      <button class="to-includes">检查数组是否包含数字2</button>
+      <button onclick="doIncludes()">检查数组是否包含字符串2</button>
+      <p class="result"></p>
+    </div>
+    <div class="from">
+      <p>一.from, 基于另一个数组或字符串创建数组的静态方法。 </p>
+      <button class="to-from">基于字符串创建数组</button>
+      <button onclick="doFrom()">map回调函数为参数创建数组</button>
+      <p class="result"></p>
+    </div>
+    <div class="find">
+      <p>一.find 方法为数组中的每个元素都调用一次函数执行,当数组中的元素在测试条件时返回 true 时, find() 返回符合条件的元素，之后的值不会再调用执行函数。 </p>
+      <button class="to-find">[1, 23, 18, 24]查找大于18的元素</button>
+      <p class="result"></p>
+    </div>
+    <div class="index-of">
+      <p>一.indexOf方法返回给定元素在数组中第一次出现的位置，如果没有出现则返回-1。lastIndexOf方法返回给定元素在数组中最后一次出现的位置，如果没有出现则返回-1。 </p>
+      <button onclick="toIndex()">[1, 23, 18, 1]查找元素1第一次出现的位置</button>
+      <button onclick="toLastIndex()">[1, 23, 18, 1]查找元素1最后一次出现的位置</button>
+      <button onclick="indexNaN()">[1, NaN, 18, 1]查找元素1最后一次出现的位置</button>
+      <button onclick="lastIndexNaN()">[1, NaN, 18, 1]查找元素1最后一次出现的位置</button>
+      <p class="result"></p>
+    </div>
+    <h1>object</h1>
+    <div class="object">
+      <p>一Object()方法返回原对象，可使用定义一个判断变量是否为对象 </p>
+      <button onclick="toObject()">判断变量是否为对象</button>
+      <p class="result"></p>
+    </div>
+    <div class="object-keys">
+      <p>一Object.keys()方法已数组形式返回对象的key </p>
+      <button onclick="objectKey()">返回对象的key</button>
+      <p class="result"></p>
+    </div>
+    <div class="object-assign">
+      <p>一Object.assign()方法主要用于对象的合并，实行的是浅拷贝，而不是深拷贝。也就是说，如果源对象某个属性的值是对象，那么目标对象拷贝得到的是这个对象的引用。同名属性会替换。 </p>
+      <button onclick="objectAssign()">返回</button>
+      <p class="result"></p>
+    </div>
+    <!-- <div class="object-create">
+      <p>一Object.create()方法使用指定的原型对象及其属性去创建一个新的对象 </p>
+      <button onclick="objectCreate()">返回</button>
+      <p class="result"></p>
+    </div> -->
+    <div class="object-hasOwnProperty">
+      <p>一Object.hasOwnProperty()方法判断对象自身属性中是否具有指定的属性。</p>
+      <button onclick="objectHasOwnProperty()">返回</button>
+      <p class="result"></p>
+    </div>
+    <h1>面向对象</h1>
+  </body>
+  <script type="text/javascript" src="./js/array.js"></script>
+</html>
